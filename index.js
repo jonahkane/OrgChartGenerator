@@ -59,7 +59,7 @@ const engineerData = () => {
     },
     {
         type: 'input',
-        message: 'What is their github uswername?',
+        message: 'What is their github username?',
         name: 'github',
 
     }
