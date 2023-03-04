@@ -72,7 +72,7 @@ const engineerData = () => {
 const internData = () => {
     return inquirer.prompt([{
     type: 'input',
-    message: 'Who is the manager?',
+    message: 'Who is the intern?',
     name: 'name',
     },
     {
@@ -87,15 +87,15 @@ const internData = () => {
     },
     {
         type: 'input',
-        message: 'What is their offce number?',
-        name: 'office',
+        message: 'What school do they attend?',
+        name: 'school',
 
     }
 ])
 .then(answers => {
     console.log(answers);
-    const manager = new Manager(answers.name, answers.empID, answers.email, answers.office);
-    team.push(manager);
+    const intern = new Intern(answers.name, answers.empID, answers.email, answers.school);
+    team.push(intern);
     questionPrompt();
 })
 }
