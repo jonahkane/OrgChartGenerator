@@ -6,8 +6,14 @@ const addManager = manager => {
     let managerHtml =  `
     <div class="card">
     <div class="card-header">
-        ${manager.name} <br />
-        Manager
+<h2>
+
+                    ${manager.name}
+                    <br />
+                </h2>
+                <h3>
+                    Manager
+                </h3>
     </div>
     <ul>
         <li>ID: ${manager.empID}</li>
@@ -22,9 +28,14 @@ const addEngineer = engineer => {
     let engineerHtml = `
     <div class="card">
     <div class="card-header">
-        ${engineer.name}<br />
-        Engineer
-    </div>
+<h2>
+
+                    ${engineer.name}
+                    <br />
+                </h2>
+                <h3>
+                    Engineer
+                </h3>    </div>
     <ul>
         <li>ID: ${engineer.empID}</li>
         <li>Email: ${engineer.email}</li>
@@ -38,8 +49,15 @@ const addIntern = intern => {
     let internHtml = `
     <div class="card">
     <div class="card-header">
-        ${intern.name} <br />
-        Intern
+    <h2>
+
+                    ${intern.name}
+                    <br />
+                </h2>
+                <h3>
+                    Intern
+                </h3>   
+    
     </div>
     <ul>
         <li>ID: ${intern.empID}</li>
