@@ -1,12 +1,13 @@
 // these are the packages that are required for the application to function properly
 const inquirer = require('inquirer');
-const Employee = require('./lib/Employee')
+// const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern'); 
 const fs = require('fs');
-const generateHTML = require('./src/helperCode.js');
+const generateHelperCode = require('./src/GenerateHelperCode.js');
 const team = [];
+const fileName = "generateHelperCode.js"
 
 
 const managerData = () => {
@@ -121,8 +122,11 @@ const questionPrompt = () => {
             }
         })
         }
+
 const buildChart = () => {
-    console.log("Org Chart Created Successfully.");
-    
+    console.log("Org chart created successfully!");
+fs.writeFileSync(fileName, generateHelperCode(team));
 }
+
+
 managerData();
