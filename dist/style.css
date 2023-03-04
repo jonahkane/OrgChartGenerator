@@ -1,0 +1,18 @@
+* {
+    margin: 15px;
+    padding: 10px;
+}
+
+header {
+    color: white;
+    background-color: #e84756;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-header {
+    color: white;
+    background-color: #0077f7;
+
+}
