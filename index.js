@@ -106,7 +106,7 @@ const questionPrompt = () => {
             type: 'list',
             name: 'menu',
             message: 'Please select your next step:',
-            choices: ['add engineer', 'add intern', 'finish and build my org chat']
+            choices: ['add an engineer', 'add an intern', 'finish and build my org chat']
         }])
         .then(userChoice => {
             switch (userChoice.menu) {
