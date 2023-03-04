@@ -6,18 +6,14 @@ const addManager = manager => {
     let managerHtml =  `
     <div class="card">
     <div class="card-header">
-<h2>
+    <h2>${manager.name}</h2>
+    <br />
+    <h3>Manager</h3>
 
-                    ${manager.name}
-                    <br />
-                </h2>
-                <h3>
-                    Manager
-                </h3>
     </div>
     <ul>
         <li>ID: ${manager.empID}</li>
-        <li>Email: ${manager.email}</li>
+        <li>Email: <span id="email"><a href="mailto:${manager.email}">email</a></span></li>
         <li>Office Number: ${manager.office}</li>
     </ul>
 </div>`;
@@ -28,18 +24,15 @@ const addEngineer = engineer => {
     let engineerHtml = `
     <div class="card">
     <div class="card-header">
-<h2>
+    <h2>${engineer.name}</h2>
+    <br />
+    <h3>Engineer</h3>
+</div>
 
-                    ${engineer.name}
-                    <br />
-                </h2>
-                <h3>
-                    Engineer
-                </h3>    </div>
     <ul>
         <li>ID: ${engineer.empID}</li>
-        <li>Email: ${engineer.email}</li>
-        <li>GitHub Username: ${engineer.github}</li>
+        <li>Email: <span id="email"><a href="mailto:${engineer.email}">email</a></span></li>
+        <li>GitHub Username: <a target="_blank"  href="https://github.com/${engineer.github}">${engineer.github}</a></li>
         </ul>
 </div>`;
 html.push(engineerHtml);
@@ -49,19 +42,14 @@ const addIntern = intern => {
     let internHtml = `
     <div class="card">
     <div class="card-header">
-    <h2>
-
-                    ${intern.name}
-                    <br />
-                </h2>
-                <h3>
-                    Intern
-                </h3>   
+    <h2>${intern.name}</h2>
+    <br />
+    <h3>Intern</h3>   
     
     </div>
     <ul>
         <li>ID: ${intern.empID}</li>
-        <li>Email: ${intern.email}</li>
+        <li>Email: <span id="email"><a href="mailto:${intern.email}">email</a></span></li>
         <li>School name: ${intern.school}</li>
     </ul>
 </div>`
