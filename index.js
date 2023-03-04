@@ -39,6 +39,66 @@ const managerData = () => {
     questionPrompt();
 })
 }
+const engineerData = () => {
+    return inquirer.prompt([{
+    type: 'input',
+    message: 'Who is the engineer?',
+    name: 'name',
+    },
+    {
+        type: 'input',
+        message: 'What is their employee ID?',
+        name: 'empID',
+    },
+    {
+        type: 'input',
+        message: 'What is their email address?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'What is their github uswername?',
+        name: 'github',
+
+    }
+])
+.then(answers => {
+    console.log(answers);
+    const engineer = new Engineer(answers.name, answers.empID, answers.email, answers.github);
+    team.push(engineer);
+    questionPrompt();
+})
+}
+const internData = () => {
+    return inquirer.prompt([{
+    type: 'input',
+    message: 'Who is the manager?',
+    name: 'name',
+    },
+    {
+        type: 'input',
+        message: 'What is their employee ID?',
+        name: 'empID',
+    },
+    {
+        type: 'input',
+        message: 'What is their email address?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'What is their offce number?',
+        name: 'office',
+
+    }
+])
+.then(answers => {
+    console.log(answers);
+    const manager = new Manager(answers.name, answers.empID, answers.email, answers.office);
+    team.push(manager);
+    questionPrompt();
+})
+}
 
 const questionPrompt = () => {
     return inquirer.prompt([
