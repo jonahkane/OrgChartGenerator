@@ -20,7 +20,7 @@ const managerData = () => {
     {
         type: 'input',
         message: 'What is their employee ID?',
-        name: 'empID',
+        name: 'id',
     },
     {
         type: 'input',
@@ -36,7 +36,7 @@ const managerData = () => {
 ])
 .then(answers => {
     console.log(answers);
-    const manager = new Manager(answers.name, answers.empID, answers.email, answers.office);
+    const manager = new Manager(answers.name, answers.id, answers.email, answers.office);
     team.push(manager);
     questionPrompt();
 })
@@ -50,7 +50,7 @@ const engineerData = () => {
     {
         type: 'input',
         message: 'What is their employee ID?',
-        name: 'empID',
+        name: 'id',
     },
     {
         type: 'input',
@@ -66,7 +66,7 @@ const engineerData = () => {
 ])
 .then(answers => {
     console.log(answers);
-    const engineer = new Engineer(answers.name, answers.empID, answers.email, answers.github);
+    const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
     team.push(engineer);
     questionPrompt();
 })
@@ -80,7 +80,7 @@ const internData = () => {
     {
         type: 'input',
         message: 'What is their employee ID?',
-        name: 'empID',
+        name: 'id',
     },
     {
         type: 'input',
@@ -96,7 +96,7 @@ const internData = () => {
 ])
 .then(answers => {
     console.log(answers);
-    const intern = new Intern(answers.name, answers.empID, answers.email, answers.school);
+    const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
     team.push(intern);
     questionPrompt();
 })

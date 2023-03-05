@@ -3,7 +3,7 @@ const employee = new Employee('Jonah', '9985', 'JonahTKane@gmail.com');
 
 test('Test to see if we can get the constructor values for the employee data', () => {
     expect(employee.name).toBe('Jonah');
-    expect(employee.id).toBe('9985');
+    expect(employee.empID).toBe('9985');
     expect(employee.email).toBe('JonahTKane@gmail.com');
 });
 
@@ -12,7 +12,7 @@ test('test if we can get the name from the getName() method', () => {
 });
 
 test('test if we can get the id from the getId() method', () => {
-    expect(employee.getId()).toBe('9985');
+    expect(employee.getempID()).toBe('9985');
 });
 
 test('test if we can get the email from the getEmail() method', () => {
