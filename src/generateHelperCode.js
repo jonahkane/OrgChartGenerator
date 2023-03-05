@@ -4,55 +4,49 @@ const generateTeam = (team) => {
 const addManager = manager => {
     console.log(manager);
     let managerHtml =  `
-    <div class="card">
+    <div class="card" style="width: 18rem;">
     <div class="card-header">
-    <h2>${manager.name}</h2>
-    <br />
-    <h3>Manager</h3>
-
-    </div>
-    <ul>
-        <li>ID: ${manager.id}</li>
-        <li>Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-        <li>Office Number: ${manager.officeNumber}</li>
+   ${manager.name} <br/>
+   <i class="fas fa-mug-hot"></i>Manager</div>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID: ${manager.id}</li>
+    <li class="list-group-item">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+    <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
     </ul>
-</div>`;
+    </div>`;
 html.push(managerHtml);
 }
 const addEngineer = engineer => {
     console.log(engineer);
     let engineerHtml = `
-    <div class="card">
+    <div class="card" style="width: 18rem;">
     <div class="card-header">
-    <h2>${engineer.name}</h2>
-    <br />
-    <h3>Engineer</h3>
+   ${engineer.name} <br/>
+   <i class="fas fa-glasses"></i>Engineer</div>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID: ${engineer.id}</li>
+    <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+    <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+    </ul>
 </div>
-
-    <ul>
-        <li>ID: ${engineer.id}</li>
-        <li>Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
-        <li>GitHub Username: <a target="_blank"  href="https://github.com/${engineer.github}">${engineer.github}</a></li>
-        </ul>
-</div>`;
+`;
 html.push(engineerHtml);
 }
 const addIntern = intern => {
     console.log(intern);
     let internHtml = `
-    <div class="card">
+    <div class="card" style="width: 18rem;">
     <div class="card-header">
-    <h2>${intern.name}</h2>
-    <br />
-    <h3>Intern</h3>   
-    
-    </div>
-    <ul>
-        <li>ID: ${intern.id}</li>
-        <li>Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
-        <li>School name: ${intern.school}</li>
+   ${intern.name} <br/>
+   <i class="fas fa-user-graduate"></i>Intern</div>
+   <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID: ${intern.id}</li>
+    <li class="list-group-item">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+    <li class="list-group-item">School: ${intern.school}</li>
     </ul>
-</div>`
+</div>
+
+    `
 html.push(internHtml);
 }
 
@@ -88,6 +82,7 @@ module.exports = team => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/12ac653a61.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./style.css">
         <title>Corporate Org Chart</title>
 </head>
@@ -96,7 +91,13 @@ module.exports = team => {
     <h1> My Team </h1>
     </header>
 
-    <main> ${generateTeam(team)} </main>
+    <main>
+    <div class="container-fluid">
+    <div class="row justify-content-center">
+    ${generateTeam(team)}
+    </div>
+    </div>
+    </main>
      
 </body>
 </html>
