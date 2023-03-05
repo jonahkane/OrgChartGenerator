@@ -3,7 +3,7 @@ const intern = new Intern('Jonah', '9985', 'JonahTKane@gmail.com', 'Creighton Un
 
 test('Test to see if we can get the constructor values for the intern data', () => {
     expect(intern.name).toBe('Jonah');
-    expect(intern.empID).toBe('9985');
+    expect(intern.id).toBe('9985');
     expect(intern.email).toBe('JonahTKane@gmail.com');
 });
 
@@ -12,7 +12,7 @@ test('test if we can get the name from the getName() method', () => {
 });
 
 test('test if we can get the id from the getId() method', () => {
-    expect(intern.getempID()).toBe('9985');
+    expect(intern.getId()).toBe('9985');
 });
 
 test('test if we can get the email from the getEmail() method', () => {

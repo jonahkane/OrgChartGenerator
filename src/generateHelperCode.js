@@ -12,9 +12,9 @@ const addManager = manager => {
 
     </div>
     <ul>
-        <li>ID: ${manager.empID}</li>
+        <li>ID: ${manager.Id}</li>
         <li>Email: <span id="email"><a href="mailto:${manager.email}">email</a></span></li>
-        <li>Office Number: ${manager.office}</li>
+        <li>Office Number: ${manager.officeNumber}</li>
     </ul>
 </div>`;
 html.push(managerHtml);
@@ -30,7 +30,7 @@ const addEngineer = engineer => {
 </div>
 
     <ul>
-        <li>ID: ${engineer.empID}</li>
+        <li>ID: ${engineer.Id}</li>
         <li>Email: <span id="email"><a href="mailto:${engineer.email}">email</a></span></li>
         <li>GitHub Username: <a target="_blank"  href="https://github.com/${engineer.github}">${engineer.github}</a></li>
         </ul>
@@ -48,7 +48,7 @@ const addIntern = intern => {
     
     </div>
     <ul>
-        <li>ID: ${intern.empID}</li>
+        <li>ID: ${intern.Id}</li>
         <li>Email: <span id="email"><a href="mailto:${intern.email}">email</a></span></li>
         <li>School name: ${intern.school}</li>
     </ul>
