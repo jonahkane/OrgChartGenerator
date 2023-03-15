@@ -27,6 +27,8 @@ This project can be used to quickly and professionally write an org chart for a 
 
 ## [Demo video here:](assets/Org%20Chart%20Generator.mp4)
 
+## ![Screenshot of generated HTML page](assets/Screenshot%202023-03-15%20115000.png)
+
 ---
 
 ## Contributions
